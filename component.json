@@ -1,0 +1,13 @@
+{
+  "name": "is-url",
+  "repo": "segmentio/is-url",
+  "description": "Loosely validate a URL.",
+  "version": "0.0.1",
+  "keywords": ["url", "regexp", "regex", "validate"],
+  "license": "MIT",
+  "dependencies": {},
+  "development": {
+    "component/assert": "*"
+  },
+  "scripts": ["index.js"]
+}
