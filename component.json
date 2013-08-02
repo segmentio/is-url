@@ -5,7 +5,6 @@
   "version": "0.0.1",
   "keywords": ["url", "regexp", "regex", "validate"],
   "license": "MIT",
-  "dependencies": {},
   "development": {
     "component/assert": "*"
   },

@@ -9,6 +9,9 @@ clean:
 	rm -fr build components
 
 test: build
-	@open test/index.html
+	@./node_modules/.bin/mocha \
+		--reporter spec \
+		--ui qunit \
+		--require should
 
 .PHONY: clean test
