@@ -1,7 +1,7 @@
 
 # is-url
 
-  Loosely validate a URL.
+  Check whether a string is a URL.
 
 ## Installation
 
@@ -9,9 +9,9 @@
 
 ## API
 
-### isUrl(string, stricter)
+### isUrl(string)
 
-  Loosely checks whether `string` is a URL. Optionally you can make the matching `stricter`, for example to not let `google.com` slide.
+  Checks whether `string` is a URL.
 
 ## License
 

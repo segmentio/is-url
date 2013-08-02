@@ -19,9 +19,5 @@ test('should recognize invalid urls', function () {
   isUrl('http://google').should.be.false;
   isUrl('http://google.').should.be.false;
   isUrl('google').should.be.false;
-});
-
-test('should be able to be stricter', function () {
-  isUrl('google.com').should.be.true;
-  isUrl('google.com', true).should.be.false;
+  isUrl('google.com').should.be.false;
 });
