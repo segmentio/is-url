@@ -2,7 +2,7 @@
   "name": "is-url",
   "repo": "segmentio/is-url",
   "description": "Check whether a string is a URL.",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "keywords": ["url", "regexp", "regex", "validate"],
   "license": "MIT",
   "scripts": ["index.js"]
