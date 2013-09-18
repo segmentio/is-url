@@ -1,3 +1,7 @@
+0.1.0 - September 8, 2013
+-------------------------
+* make regexp match more valid url types
+
 0.0.2 - August 2, 2013
 ----------------------
 * remove loose matching

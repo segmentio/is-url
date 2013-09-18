@@ -11,7 +11,7 @@ clean:
 test: build
 	@./node_modules/.bin/mocha \
 		--reporter spec \
-		--ui qunit \
+		--ui bdd \
 		--require should
 
 .PHONY: clean test

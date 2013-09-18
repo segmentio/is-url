@@ -1,23 +1,85 @@
+describe('is-url', function () {
+
 var isUrl = require('..');
 
-suite('is-url');
+describe('valid', function () {
+  it('http://google.com', function () {
+    isUrl('http://google.com').should.be.true;
+  });
 
-test('should recognize valid urls', function () {
-  isUrl('http://google.com').should.be.true;
-  isUrl('https://google.com').should.be.true;
-  isUrl('http://www.google.com').should.be.true;
-  isUrl('http://google.com/something').should.be.true;
-  isUrl('http://google.com?q=query').should.be.true;
-  isUrl('http://google.com#hash').should.be.true;
-  isUrl('http://google.com/something?q=query#hash').should.be.true;
-  isUrl('http://google.co.uk').should.be.true;
-  isUrl('http://www.google.co.uk').should.be.true;
+  it('https://google.com', function () {
+    isUrl('https://google.com').should.be.true;
+  });
+
+  it('ftp://google.com', function () {
+    isUrl('ftp://google.com').should.be.true;
+  });
+
+  it('http://www.google.com', function () {
+    isUrl('http://www.google.com').should.be.true;
+  });
+
+  it('http://google.com/something', function () {
+    isUrl('http://google.com/something').should.be.true;
+  });
+
+  it('http://google.com?q=query', function () {
+    isUrl('http://google.com?q=query').should.be.true;
+  });
+
+  it('http://google.com#hash', function () {
+    isUrl('http://google.com#hash').should.be.true;
+  });
+
+  it('http://google.com/something?q=query#hash', function () {
+    isUrl('http://google.com/something?q=query#hash').should.be.true;
+  });
+
+  it('http://google.co.uk', function () {
+    isUrl('http://google.co.uk').should.be.true;
+  });
+
+  it('http://www.google.co.uk', function () {
+    isUrl('http://www.google.co.uk').should.be.true;
+  });
+
+  it('http://google.cat', function () {
+    isUrl('http://google.cat').should.be.true;
+  });
+
+  it('https://d1f4470da51b49289906b3d6cbd65074@app.getsentry.com/13176', function () {
+    isUrl('https://d1f4470da51b49289906b3d6cbd65074@app.getsentry.com/13176').should.be.true;
+  });
+
+  it('http://0.0.0.0', function () {
+    isUrl('http://0.0.0.0').should.be.true;
+  });
+
+  it('http://localhost', function () {
+    isUrl('http://localhost').should.be.true;
+  });
 });
 
-test('should recognize invalid urls', function () {
-  isUrl('http://').should.be.false;
-  isUrl('http://google').should.be.false;
-  isUrl('http://google.').should.be.false;
-  isUrl('google').should.be.false;
-  isUrl('google.com').should.be.false;
+describe('invalid', function () {
+  it('http://', function () {
+    isUrl('http://').should.be.false;
+  });
+
+  it('http://google', function () {
+    isUrl('http://google').should.be.false;
+  });
+
+  it('http://google.', function () {
+    isUrl('http://google.').should.be.false;
+  });
+
+  it('google', function () {
+    isUrl('google').should.be.false;
+  });
+
+  it('google.com', function () {
+    isUrl('google.com').should.be.false;
+  });
+});
+
 });
