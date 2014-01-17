@@ -9,7 +9,7 @@ module.exports = isUrl;
  * Matcher.
  */
 
-var matcher = /^(ftp|https?):\/\/([^\s\.]+\.[^\s]{2,}|localhost:\d+)$/;
+var matcher = /^(ftp|https?):\/\/([^\s\.]+\.[^\s]{2,}|localhost[\:?\d]*)$/;
 
 
 /**
