@@ -1,3 +1,5 @@
+var should = require("should")
+
 describe('is-url', function () {
 
 var isUrl = require('..');
