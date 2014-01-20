@@ -5,5 +5,8 @@
     "mocha": "*",
     "should": "*"
   },
-  "repository": "https://github.com/segmentio/is-url"
+  "repository": "https://github.com/segmentio/is-url",
+  "scripts": {
+    "test": "mocha"
+  }
 }
