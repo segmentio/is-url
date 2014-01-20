@@ -4,5 +4,6 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*"
-  }
+  },
+  "repository": "https://github.com/segmentio/is-url"
 }
