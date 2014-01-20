@@ -81,6 +81,10 @@ describe('valid', function () {
     isUrl('wss://secure.example.com/biz').should.be.true;
   });
 
+  it('http://localhost:4000', function () {
+    isUrl('http://localhost:4000').should.be.true;
+  });
+
 });
 
 describe('invalid', function () {

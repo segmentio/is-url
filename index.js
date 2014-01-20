@@ -1,4 +1,3 @@
-
 /**
  * Expose `isUrl`.
  */
@@ -10,7 +9,7 @@ module.exports = isUrl;
  * Matcher.
  */
 
-var matcher = /^(https?|wss?|ftp|mongodb|postgres|redis):\/\/([^\s\.]+\.[^\s]{2,}|localhost)$/;
+var matcher = /^(https?|wss?|ftp|mongodb|postgres|redis):\/\/([^\s\.]+\.[^\s]{2,}|localhost[\:?\d]*)$/;
 
 
 /**
