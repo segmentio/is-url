@@ -1,12 +1,11 @@
 {
   "name": "is-url",
-  "version": "1.0.0",
-  "devDependencies": {
-    "mocha": "*",
-    "should": "*"
-  },
   "repository": "https://github.com/segmentio/is-url",
+  "version": "1.1.0",
   "scripts": {
     "test": "make test"
+  },
+  "devDependencies": {
+    "mocha": "*"
   }
 }

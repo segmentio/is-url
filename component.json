@@ -1,9 +1,19 @@
 {
   "name": "is-url",
   "repo": "segmentio/is-url",
-  "description": "Check whether a string is a URL.",
-  "version": "1.0.0",
-  "keywords": ["url", "regexp", "regex", "validate"],
+  "version": "1.1.0",
   "license": "MIT",
-  "scripts": ["index.js"]
+  "description": "Check whether a string is a URL.",
+  "keywords": [
+    "url",
+    "regexp",
+    "regex",
+    "validate"
+  ],
+  "scripts": [
+    "index.js"
+  ],
+  "development": {
+    "component/assert": "*"
+  }
 }
