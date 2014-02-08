@@ -58,10 +58,31 @@ describe('valid', function () {
   it('http://localhost', function () {
     isUrl('http://localhost').should.be.true;
   });
-  
+
+  it('postgres://u:p@example.com:5702/db', function () {
+    isUrl('postgres://u:p@example.com:5702/db').should.be.true;
+  });
+
+  it('redis://:123@174.129.42.52:13271', function () {
+    isUrl('redis://:123@174.129.42.52:13271').should.be.true;
+  });
+
+  it('mongodb://u:p@example.com:10064/db', function () {
+    isUrl('mongodb://u:p@example.com:10064/db').should.be.true;
+  });
+
+  it('ws://chat.example.com/games', function () {
+    isUrl('ws://chat.example.com/games').should.be.true;
+  });
+
+  it('wss://secure.example.com/biz', function () {
+    isUrl('wss://secure.example.com/biz').should.be.true;
+  });
+
   it('http://localhost:4000', function () {
     isUrl('http://localhost:4000').should.be.true;
   });
+
 });
 
 describe('invalid', function () {
