@@ -7,6 +7,6 @@
   },
   "repository": "https://github.com/segmentio/is-url",
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   }
 }
