@@ -9,7 +9,7 @@ module.exports = isUrl;
  * Matcher.
  */
 
-var matcher = /^\w+:\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
+var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
 
 /**
  * Loosely validate a URL `string`.
