@@ -4,11 +4,9 @@
 
 ## Installation
 
-```
-$ component install segmentio/is-url
-```
-```
-$ npm install is-url
+
+```sh
+npm install is-url --save
 ```
 
 ## API
