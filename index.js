@@ -1,23 +1,12 @@
+var urlRegex = require('url-regex');
 
-/**
- * Expose `isUrl`.
- */
+module.exports = function(input){
+  if (!input) return false;
+  if (typeof(input) !== "string") return false;
 
-module.exports = isUrl;
+  // Special cases
+  if (input.indexOf("http://0.0.0.0") === 0) return true;
+  if (input.indexOf("http://127.0.0.1") === 0) return true;
 
-/**
- * Matcher.
- */
-
-var matcher = /^\w+:\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
-
-/**
- * Loosely validate a URL `string`.
- *
- * @param {String} string
- * @return {Boolean}
- */
-
-function isUrl(string){
-  return matcher.test(string);
+  return urlRegex().test(input);
 }
