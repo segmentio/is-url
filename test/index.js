@@ -91,6 +91,23 @@ describe('is-url', function () {
     it('google.com', function () {
       assert(url('google.com'));
     });
+
+    it('http://0.0.0.0', function () {
+      assert(url('http://0.0.0.0'));
+    });
+
+    it('http://0.0.0.0/favico.ico', function () {
+      assert(url('http://0.0.0.0/favicon.ico'));
+    });
+
+    it('http://127.0.0.1', function () {
+      assert(url('http://127.0.0.1'));
+    });
+
+    it('http://127.0.0.1/foo/bar?query=yep', function () {
+      assert(url('http://127.0.0.1/foo/bar?query=yep'));
+    });
+
   });
 
   describe('invalid', function () {
