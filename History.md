@@ -1,4 +1,8 @@
 
+1.2.0 - November 25, 2014
+-------------------------
+* add support for protocol relative urls
+
 1.1.0 - February 8, 2013
 ------------------------
 * support any protocol
