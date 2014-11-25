@@ -92,6 +92,10 @@ describe('is-url', function () {
     it('http://localhost:342/a/path', function () {
       assert(url('http://localhost:342/a/path'));
     });
+
+    it('//google.com', function () {
+      assert(url('//google.com'));
+    });
   });
 
   describe('invalid', function () {
