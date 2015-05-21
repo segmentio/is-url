@@ -5,6 +5,7 @@
   "scripts": {
     "test": "make test"
   },
+  "license": "MIT",
   "devDependencies": {
     "mocha": "*"
   }
