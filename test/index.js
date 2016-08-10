@@ -96,6 +96,43 @@ describe('is-url', function () {
     it('//google.com', function () {
       assert(url('//google.com'));
     });
+
+    it('localhost', function () {
+      assert(url('localhost'));
+    });
+
+    it('localhost/path', function () {
+      assert(url('localhost/path'));
+    });
+
+    it('localhost:8080', function () {
+      assert(url('localhost:8080'));
+    });
+
+    it('localhost:8080/path', function () {
+      assert(url('localhost:8080/path'));
+    });
+
+    it('192.11.222.444', function () {
+      assert(url('192.11.222.444'));
+    });
+
+    it('192.11.222.444/path', function () {
+      assert(url('192.11.222.444/path'));
+    });
+
+    it('2001:0db8:0000:0042:0000:8a2e:0370:7334', function () {
+      assert(url('2001:0db8:0000:0042:0000:8a2e:0370:7334'));
+    });
+
+    it('2001:0db8:0000:0042:0000:8a2e:0370:7334/path', function () {
+      assert(url('2001:0db8:0000:0042:0000:8a2e:0370:7334/path'));
+    });
+
+    it('google.com', function () {
+      assert(url('google.com'));
+    });
+
   });
 
   describe('invalid', function () {
@@ -115,8 +152,5 @@ describe('is-url', function () {
       assert(!url('google'));
     });
 
-    it('google.com', function () {
-      assert(!url('google.com'));
-    });
   });
 });
