@@ -9,20 +9,13 @@ var assert = require('assert');
 
 describe('is-url', function () {
   describe('valid', function () {
-    it('http://google.com', function () {
-      assert(url('http://google.com'));
-    });
-
-    it('https://google.com', function () {
-      assert(url('https://google.com'));
-    });
-
-    it('ftp://google.com', function () {
-      assert(url('ftp://google.com'));
-    });
 
     it('http://www.google.com', function () {
       assert(url('http://www.google.com'));
+    });
+
+    it('http://google.com', function () {
+      assert(url('http://google.com'));
     });
 
     it('http://google.com/something', function () {
@@ -53,16 +46,84 @@ describe('is-url', function () {
       assert(url('http://google.cat'));
     });
 
-    it('https://d1f4470da51b49289906b3d6cbd65074@app.getsentry.com/13176', function () {
-      assert(url('https://d1f4470da51b49289906b3d6cbd65074@app.getsentry.com/13176'));
-    });
-
     it('http://0.0.0.0', function () {
       assert(url('http://0.0.0.0'));
     });
 
+    it('http://192.11.222.444', function () {
+      assert(url('http://192.11.222.444'));
+    });
+
+    it('http://192.11.222.444/path', function () {
+      assert(url('http://192.11.222.444/path'));
+    });
+
+    it('http://2001:0db8:0000:0042:0000:8a2e:0370:7334', function () {
+      assert(url('http://2001:0db8:0000:0042:0000:8a2e:0370:7334'));
+    });
+
+    it('http://2001:0db8:0000:0042:0000:8a2e:0370:7334/path', function () {
+      assert(url('http://2001:0db8:0000:0042:0000:8a2e:0370:7334/path'));
+    });
+
+    it('0.0.0.0', function () {
+      assert(url('0.0.0.0'));
+    });
+
+    it('192.11.222.444', function () {
+      assert(url('192.11.222.444'));
+    });
+
+    it('192.11.222.444/path', function () {
+      assert(url('192.11.222.444/path'));
+    });
+
+    it('2001:0db8:0000:0042:0000:8a2e:0370:7334', function () {
+      assert(url('2001:0db8:0000:0042:0000:8a2e:0370:7334'));
+    });
+
+    it('2001:0db8:0000:0042:0000:8a2e:0370:7334/path', function () {
+      assert(url('2001:0db8:0000:0042:0000:8a2e:0370:7334/path'));
+    });
+
+    it('www.google.com', function () {
+      assert(url('www.google.com'));
+    });
+
+    it('google.com', function () {
+      assert(url('google.com'));
+    });
+
+    it('//google.com', function () {
+      assert(url('//google.com'));
+    });
+
+    it('localhost', function () {
+      assert(url('localhost'));
+    });
+
     it('http://localhost', function () {
       assert(url('http://localhost'));
+    });
+
+    it('https://localhost:342/a/path?query=true#hash', function () {
+      assert(url('https://localhost:342/a/path?query=true#hash'));
+    });
+
+    it('localhost:342/a/path', function () {
+      assert(url('https://localhost:342/a/path?query=true#hash'));
+    });
+
+    it('https://google.com', function () {
+      assert(url('https://google.com'));
+    });
+
+    it('https://d1f4470da51b49289906b3d6cbd65074@app.getsentry.com/13176', function () {
+      assert(url('https://d1f4470da51b49289906b3d6cbd65074@app.getsentry.com/13176'));
+    });
+
+    it('ftp://google.com', function () {
+      assert(url('ftp://google.com'));
     });
 
     it('postgres://u:p@example.com:5702/db', function () {
@@ -85,90 +146,6 @@ describe('is-url', function () {
       assert(url('wss://secure.example.com/biz'));
     });
 
-    it('http://localhost:4000', function () {
-      assert(url('http://localhost:4000'));
-    });
-
-    it('http://localhost:342/a/path', function () {
-      assert(url('http://localhost:342/a/path'));
-    });
-
-    it('//google.com', function () {
-      assert(url('//google.com'));
-    });
-
-    it('localhost', function () {
-      assert(url('localhost'));
-    });
-
-    it('http://localhost', function () {
-      assert(url('http://localhost'));
-    });
-
-    it('localhost/path', function () {
-      assert(url('localhost/path'));
-    });
-
-    it('http://localhost/path', function () {
-      assert(url('http://localhost/path'));
-    });
-
-    it('localhost:8080', function () {
-      assert(url('localhost:8080'));
-    });
-
-    it('http://localhost:8080', function () {
-      assert(url('http://localhost:8080'));
-    });
-
-    it('localhost:8080/path', function () {
-      assert(url('localhost:8080/path'));
-    });
-
-    it('http://localhost:8080/path', function () {
-      assert(url('http://localhost:8080/path'));
-    });
-
-    it('192.11.222.444', function () {
-      assert(url('192.11.222.444'));
-    });
-
-    it('http://192.11.222.444', function () {
-      assert(url('http://192.11.222.444'));
-    });
-
-    it('192.11.222.444/path', function () {
-      assert(url('192.11.222.444/path'));
-    });
-
-    it('http://192.11.222.444/path', function () {
-      assert(url('http://192.11.222.444/path'));
-    });
-
-    it('2001:0db8:0000:0042:0000:8a2e:0370:7334', function () {
-      assert(url('2001:0db8:0000:0042:0000:8a2e:0370:7334'));
-    });
-
-    it('http://2001:0db8:0000:0042:0000:8a2e:0370:7334', function () {
-      assert(url('http://2001:0db8:0000:0042:0000:8a2e:0370:7334'));
-    });
-
-    it('2001:0db8:0000:0042:0000:8a2e:0370:7334/path', function () {
-      assert(url('2001:0db8:0000:0042:0000:8a2e:0370:7334/path'));
-    });
-
-    it('http://2001:0db8:0000:0042:0000:8a2e:0370:7334/path', function () {
-      assert(url('http://2001:0db8:0000:0042:0000:8a2e:0370:7334/path'));
-    });
-
-    it('google.com', function () {
-      assert(url('google.com'));
-    });
-
-    it('http://google.com', function () {
-      assert(url('http://google.com'));
-    });
-
   });
 
   describe('invalid', function () {
@@ -189,4 +166,19 @@ describe('is-url', function () {
     });
 
   });
+
+  describe('protocol required', function () {
+    it('google.com', function () {
+      assert(!url('google.com', { requireProtocol: true }));
+    });
+
+    it('192.11.222.444/path', function () {
+      assert(!url('192.11.222.444/path', { requireProtocol: true }));
+    });
+
+    it('2001:0db8:0000:0042:0000:8a2e:0370:7334', function () {
+      assert(!url('2001:0db8:0000:0042:0000:8a2e:0370:7334', { requireProtocol: true }));
+    });
+  })
+
 });
