@@ -1,11 +1,5 @@
 
 /**
- * Expose `isUrl`.
- */
-
-module.exports = isUrl;
-
-/**
  * Matcher.
  */
 
@@ -21,3 +15,11 @@ var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
 function isUrl(string){
   return matcher.test(string);
 }
+
+/**
+ * Expose `isUrl`.
+ * Expose `matcher`.
+ */
+
+module.exports = isUrl;
+module.exports.matcher = matcher;
