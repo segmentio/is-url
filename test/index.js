@@ -119,4 +119,15 @@ describe('is-url', function () {
       assert(!url('google.com'));
     });
   });
+
+  describe('redos', function () {
+    it('redos exploit', function () {
+      // Invalid. This should be discovered in under 1 second.
+      var attackString = 'a://localhost' + '9'.repeat(100000) + '\t';
+      var before = process.hrtime();
+      assert(!url(attackString), 'attackString was valid');
+      var elapsed = process.hrtime(before);
+      assert(elapsed[0] < 1, 'attackString took ' + elapsed[0] + ' > 1 seconds');
+    });
+  });
 });
