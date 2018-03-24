@@ -118,6 +118,22 @@ describe('is-url', function () {
     it('google.com', function () {
       assert(!url('google.com'));
     });
+
+    it('empty', function () {
+      assert(!url(''));
+    });
+
+    it('undef', function () {
+      assert(!url(undefined));
+    });
+
+    it('object', function () {
+      assert(!url({}));
+    });
+
+    it('re', function () {
+      assert(!url(/abc/));
+    });
   });
 
   describe('redos', function () {

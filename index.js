@@ -24,6 +24,10 @@ var nonLocalhostDomainRE = /^[^\s\.]+\.\S{2,}$/;
  */
 
 function isUrl(string){
+  if (typeof string !== 'string') {
+    return false;
+  }
+
   var match = string.match(protocolAndDomainRE);
   if (!match) {
     return false;
