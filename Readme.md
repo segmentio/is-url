@@ -1,22 +1,19 @@
 # is-url
 
-  Check whether a string is a URL.
+Check whether a string is a URL.
 
 ## Installation
 
-```
-$ component install segmentio/is-url
-```
-```
-$ npm install is-url
+```sh
+npm install is-url
 ```
 
 ## API
 
-### isUrl(string)
+### `isUrl(string)`
 
-  Checks whether `string` is a URL.
+Returns a Boolean indicating whether `string` is a URL.
 
 ## License
 
-  MIT
+MIT
