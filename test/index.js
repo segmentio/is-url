@@ -141,7 +141,7 @@ describe('is-url', function () {
       // Invalid. This should be discovered in under 1 second.
       var attackString = 'a://localhost' + '9'.repeat(100000) + '\t';
       var before = process.hrtime();
-      assert(!url(attackString), 'attackString was valid');
+      assert(!url(attackString), 'attackString was invalid');
       var elapsed = process.hrtime(before);
       assert(elapsed[0] < 1, 'attackString took ' + elapsed[0] + ' > 1 seconds');
     });
