@@ -1,10 +1,3 @@
-
-/**
- * Expose `isUrl`.
- */
-
-module.exports = isUrl;
-
 /**
  * RegExps.
  * A URL must match #1 and then at least one of #2/#3.
@@ -45,3 +38,9 @@ const isUrl = string => {
 
   return false;
 };
+
+/**
+ * Expose `isUrl`.
+ */
+
+module.exports = isUrl;
