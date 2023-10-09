@@ -96,15 +96,27 @@ describe('is-url', function () {
     it('//google.com', function () {
       assert(url('//google.com'));
     });
+
+    it('http://google', function () {
+      assert(url('http://google'));
+    });
+    
+    it('http://google:3000', function () {
+      assert(url('http://google:3000'));
+    });
+    
+    it('http://google:3000/x', function () {
+      assert(url('http://google:3000/x'));
+    });
+    
+    it('http://google/x', function () {
+      assert(url('http://google/x'));
+    });
   });
 
   describe('invalid', function () {
     it('http://', function () {
       assert(!url('http://'));
-    });
-
-    it('http://google', function () {
-      assert(!url('http://google'));
     });
 
     it('http://google.', function () {
