@@ -11,10 +11,10 @@ module.exports = isUrl;
  * Use two levels of REs to avoid REDOS.
  */
 
-var protocolAndDomainRE = /^(?:\w+:)?\/\/(\S+)$/;
+let protocolAndDomainRE = /^(?:\w+:)?\/\/(\S+)$/;
 
-var localhostDomainRE = /^localhost[\:?\d]*(?:[^\:?\d]\S*)?$/
-var nonLocalhostDomainRE = /^[^\s\.]+\.\S{2,}$/;
+let localhostDomainRE = /^localhost[\:?\d]*(?:[^\:?\d]\S*)?$/
+let nonLocalhostDomainRE = /^[^\s\.]+\.\S{2,}$/;
 
 /**
  * Loosely validate a URL `string`.
